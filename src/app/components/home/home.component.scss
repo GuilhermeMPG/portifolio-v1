@@ -1,0 +1,55 @@
+html main {
+  scroll-behavior: smooth;
+  scroll-margin-top: 600px;
+
+}
+
+app-about, app-experience {
+  scroll-margin-top: 500px; /* Ajuste esse valor conforme necessário */
+}
+
+main {
+  display: flex;
+  height: 100vh; /* Altura total da viewport */
+}
+section aside {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+section {
+  width: 570px; /* Largura fixa para a coluna estática */
+  position: fixed; /* Fixa a coluna no lugar */
+  height: 100%; /* Ocupa a altura total da viewport */
+  overflow: auto; /* Permite que o conteúdo role se for maior que a altura */
+}
+
+aside {
+  margin-left: 570px; /* Margem para não sobrepor a coluna estática */
+  padding: 20px;
+  width: 100%; /* Ajusta a largura para o restante da página */
+  justify-content: end;
+  height: 100vh; /* Altura total da viewport para permitir o scroll */
+
+}
+
+
+@media (max-width: 768px) {
+  main {
+    display: block;
+    height: auto;
+  }
+
+  section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Espaço entre as "colunas" */
+  }
+
+  aside {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+  }
+}
